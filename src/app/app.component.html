@@ -1,0 +1,14 @@
+<app-header (toggle)="toggleMenu($event)"></app-header>
+
+<div class="container-fluid main-wrapper">
+  <app-products-list
+    (productSelected)="addProduct($event)"></app-products-list>
+</div>
+
+<app-drawer
+  [isVisible]="isOpen"
+  (toggle)="toggleMenu()"
+  [product]="productSelected"
+  [productAdded]="productAdded"></app-drawer>
+
+<app-footer></app-footer>

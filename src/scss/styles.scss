@@ -1,0 +1,15 @@
+// vendor css - bootstrap
+@import 'bootstrap';
+
+// Config varibles.
+// -----------------------------------------------------------------------------
+@import 'config/settings';
+
+// Base styles
+@import 'base/global';
+
+// Splash screen
+@import 'base/splash';
+
+// Switch
+@import 'base/switch';

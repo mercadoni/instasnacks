@@ -1,0 +1,24 @@
+<div class="card shadow border-0">
+  <div [ngClass]="{ 'card-info': true, 'row': isInDrawer }">
+    <img [ngClass]="{ 'card-img-top': true, 'col-4': isInDrawer }"
+         src="{{ product.images[0].urls[0].url }}"
+         alt="Card image cap">
+    <div [ngClass]="{ 'card-body': true, 'col-8': isInDrawer, 'py-2': isInDrawer }">
+      <h4 [ngClass]="{ 'card-title': true, 'card-small-title': isInDrawer }">{{ product.name }}</h4>
+    
+      <ng-container *ngIf="!isInDrawer">
+        <h5>Categories</h5>
+        <div class="category" *ngFor="let category of product.categories">
+          {{ category.name }}
+        </div>
+      </ng-container>
+    
+      <h5 [ngClass]="{ 'label-price': true, 'card-small-font': isInDrawer }">Price</h5>
+      <div [ngClass]="{ 'price': true, 'card-small-font': isInDrawer }">{{ (product.price ? product.price : 0)  | currency:'COP':'symbol-narrow' }}</div>
+    </div>
+  </div>
+  <button class="btn btn-primary actions-remove-product" *ngIf="isInDrawer" (click)="removeProduct()">Remove</button>
+  <div class="card-footer actions" *ngIf="!isInDrawer">
+    <button class="btn btn-primary actions-add-product" (click)="addProduct(product)">Add to cart</button>
+  </div>
+</div>

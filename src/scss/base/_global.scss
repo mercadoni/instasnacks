@@ -1,0 +1,44 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: $text-main;
+}
+
+.main-wrapper {
+  padding: 65px 15px 140px;
+}
+
+.btn,
+button[disabled] { cursor: not-allowed; }
+
+.btn,
+button.close { cursor: pointer; }
+
+.btn.btn-primary {
+  &,
+  &:not(:disabled):not(.disabled):active {
+    background-color: $eggplant;
+    border-color: darken($eggplant, 5%);
+    transition: all .5s;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba($eggplant, 0.5);
+    }
+  
+    &:hover{
+      background-color: darken($eggplant, 10%);
+      border-color: darken($eggplant, 15%);
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}

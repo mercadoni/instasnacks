@@ -1,0 +1,20 @@
+@import 'settings';
+
+.drawer {
+  display: block;
+  width: 400px;
+  overflow-y: scroll;
+  position: fixed;
+  right: -300px;
+  opacity: 0;
+  top: 56px;
+  height: 100%;
+  z-index: 100;
+  background-color: lighten($metal, 15%);
+  transition: .5s opacity, .5s right;
+  
+  &.open {
+    right: 0;
+    opacity: 1;
+  }
+}
