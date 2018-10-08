@@ -1,0 +1,23 @@
+@import 'settings';
+
+.card {
+  height: 100%;
+  transition: all .5s;
+  
+  &:hover {
+    transform: scale(.95);
+  }
+  
+  &-info {
+    height: 100%;
+    align-items: center;
+  }
+  
+  &-small-title { font-size: 1.2rem; }
+  
+  &-small-font { font-size: 1rem; }
+  
+  .actions {
+    &-remove-product { border-radius: 0; }
+  }
+}

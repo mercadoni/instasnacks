@@ -1,0 +1,22 @@
+<ng-container *ngIf="!isInDrawer">
+  <h2 class="col-12">Filter</h2>
+  
+  <div class="col-12 d-flex mb-4">
+    <label class="switch">
+      <input type="checkbox" (change)="orderByPrice($event)">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</ng-container>
+
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>
+
+<app-product
+  *ngFor="let product of products | orderByPrice:orderPrice; let i=index"
+  [index]="i"
+  [isInDrawer]="isInDrawer"
+  [product]="product"
+  (productSelected)="addProduct($event)"
+  (productRemoved)="removeProduct($event)"></app-product>
+
+

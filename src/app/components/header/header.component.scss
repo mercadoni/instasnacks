@@ -1,0 +1,12 @@
+@import 'settings';
+
+.navbar {
+  background-color: $caribbean-dark;
+  
+  &-dark {
+    .navbar-toggler {
+      outline: none;
+      border-color: rgba(255, 255, 255, .5);
+    }
+  }
+}

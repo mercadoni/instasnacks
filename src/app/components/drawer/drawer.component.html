@@ -1,0 +1,15 @@
+<h2>Cart</h2>
+
+<ng-container *ngIf="productList.length > 0; then Products else NoProducts"></ng-container>
+
+<ng-template #Products>
+  <div>Total: {{ total | currency:'COP':'symbol-narrow' }}</div>
+  <app-products-list
+    [isInDrawer]=true
+    [productList]="productList"
+    (productRemoved)="removeProduct($event)"></app-products-list>
+</ng-template>
+
+<ng-template #NoProducts>
+  <p>Add products to your shopping list</p>
+</ng-template>
