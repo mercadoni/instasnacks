@@ -6,7 +6,7 @@
  - [Requirements](#requirements)
 
 ## Instructions for web developers
- 1. Clone this repo.
+ 1. Fork this repo.
  2. Create a new branch.
  3. Understand the requirement and the user stories.
  4. As your first commit, select your tech stack
@@ -20,11 +20,11 @@
     data provided could have inconsistencies, make sure to handle them.
  6.  If you find blockers, keep moving and get them solved later, please
     write them down in a markdown file inside your repo.
- 7. Create a Pull Request, add 'davidcp90' as a reviewer, and send an email to
+ 7. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewer, and send an email to
     david.camargo@mercadoni.com
 
 ## Instructions for mobile developers
- 1. Clone this repo.
+ 1. Fork this repo.
  2. Create a new branch.
  3. Understand the requirement and
     the user stories. As your first commit, select your tech stack
@@ -40,7 +40,7 @@
     data provided could have inconsistencies, make sure to handle them.  
  5. If you find blockers, keep moving and get them solved later, please
     write them down in a markdown file inside your repo.
- 6. Create a Pull Request, add 'davidcp90' as a reviewer, and send an email to
+ 6. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewer, and send an email to
     david.camargo@mercadoni.com
 ## Requirements
 Mercadoni wants to have a "landing page" for parents to buy snacks for their children.
