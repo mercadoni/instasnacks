@@ -40,14 +40,14 @@
     data provided could have inconsistencies, make sure to handle them.  
  5. If you find blockers, keep moving and get them solved later, please
     write them down in a markdown file inside your repo.
- 6. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewer, and send an email to
-    david.camargo@mercadoni.com
+ 6. Create a Pull Request (in your own fork), add 'davidcp90'& 'cheloreyes' as a reviewers, and send an email to
+    david.camargo@mercadoni.com and marcelo.reyes@mercadoni.com
 ## Requirements
 Mercadoni wants to have a "landing page" for parents to buy snacks for their children.
 Take into account the following requirements
 ### Non-functional
 - We expect you to deliver idiomatic code in a way that is easy to read and follows the accepted guidelines in your area of expertise.
-- It looks and feels good.
+- It looks and feels REALLY good.
 - If you are developing for web, you'd need to adapt the mockup to a desktop version. It should work properly on mobile and desktop
 - You should use the following color palette. Use it wisely:
 	- caribbean: #00D59E
@@ -57,10 +57,12 @@ Take into account the following requirements
 	- text-main: #333
 	- eggplant: #531E60
 ### Functional (user stories)
+1. The app should ask for the user name before starting. Get creative an design this UI.
 1. Customers should see all the products provided by https://api.myjson.com/bins/1gbraw. The UI should follow these mockups:
 	- https://s3-us-west-2.amazonaws.com/assets.mercadoni.com/eng/mock1.png
 	- https://s3-us-west-2.amazonaws.com/assets.mercadoni.com/eng/mock2.png
 3. Customers should be able to sort the products by price (low to high, high to low).
 4. Customers should be able to add products to cart.
+5. Products added to cart, and totals should be persisted in a firestore database, you can create a firebase account for this without any cost. Please provide us a user to watch the documents created in firestore.
 5. Customers should be able to open the cart drawer and see products added and totals.
 6. Any UX improvement will be accepted and give you extra points, but take into account the previous requirements.
