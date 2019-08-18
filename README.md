@@ -1,68 +1,13 @@
-# InstaSnacks
-*Technical test for web or mobile developers*
+## Tech Stack
+I chose React as my stack because it's the language I have experience in.
 
- - [Instructions for web developers](#instructions-for-web-developers)
- - [Instructions for mobile developers](#instructions-for-mobile-developers)
- - [Requirements](#requirements)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Instructions for web developers
- 1. Fork this repo.
- 2. Create a new branch.
- 3. Understand the requirement and the user stories.
- 4. As your first commit, select your tech stack
-    (using react would give you extra points, but you can use Angular or
-    Vue) and design the "architecture" of your app. Upload a
-    sketch/photo/readme, etc explaining how your app is going to work,
-    why did you choose that stack and when do you think you can deliver
-    the final product (we expect you to deliver it in less than 5 days). Send an email to david.camargo@instaleap.io referring the commit you made.
- 5. Have fun coding this challenge. Take into account that the
-    data provided could have inconsistencies, make sure to handle them.
- 6. If you find blockers, keep moving and get them solved later, please
-    write them down in a markdown file inside your repo.
- 7. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewer, and send an email to david.camargo@instaleap.io
+## Available Scripts
+In the project directory, you can run:
 
-## Instructions for mobile developers
- 1. Fork this repo.
- 2. Create a new branch.
- 3. Understand the requirement and
-    the user stories. As your first commit, select your tech stack
-    (Android: use kotlin as the main language and the libraries of your
-    choice, iOS: use swift as the main language and the libraries of
-    your choice) and design the "architecture" of your app. Upload a
-    sketch/photo/readme, etc, explaining how your app is going to work,
-    why did you choose that stack and when do you think you can deliver
-    the final product (we expect you to deliver it in less than 5 days).
-    Send an email to david.camargo@instaleap.com referring the commit
-    you made.
- 4. Have fun coding this challenge. Take into account that the
-    data provided could have inconsistencies, make sure to handle them.  
- 5. If you find blockers, keep moving and get them solved later, please
-    write them down in a markdown file inside your repo.
- 6. Create a Pull Request (in your own fork), add 'davidcp90' as a reviewers, and send an email to
-    david.camargo@instaleap.com
+This app is going to be a single page a application and i think i can delive it in tuesday august 20th 2019.
 
-## Requirements
-InstaSnacks wants to have a "landing page" for parents to buy snacks for their children. Take into account the following requirements
-
-### Non-functional
-- We expect you to deliver idiomatic code in a way that is easy to read and follows the accepted guidelines in your area of expertise.
-- It looks and feels REALLY good.
-- If you are developing for web, you'd need to adapt the mockup to a desktop version. It should work properly on mobile and desktop
-- You should use the following color palette. Use it wisely:
-    - caribbean: #00D59E
-    - caribbean-dark:#00C491
-    - metal: #89A5BB
-    - dust: #F0F0F0
-    - text-main: #333
-    - eggplant: #531E60
-
-### Functional (user stories)
-1. The app should ask for the user name before starting. Get creative an design this UI.
-2. Customers should see all the products provided by https://api.myjson.com/bins/1gbraw. The UI should follow these mockups:
-    - https://s3-us-west-2.amazonaws.com/assets.mercadoni.com/eng/mock1.png
-    - https://s3-us-west-2.amazonaws.com/assets.mercadoni.com/eng/mock2.png
-3. Customers should be able to sort the products by price (low to high, high to low).
-4. Customers should be able to add products to cart.
-5. Products added to cart, and totals should be persisted in a firestore database, you can create a firebase account for this without any cost. Please provide us a user to watch the documents created in firestore.
-5. Customers should be able to open the cart drawer and see products added and totals.
-6. Any UX improvement will be accepted and give you extra points, but take into account the previous requirements.
+### `npm start`
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
