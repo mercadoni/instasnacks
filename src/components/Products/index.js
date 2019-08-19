@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from "react"
 import {useSelector, useDispatch} from "react-redux";
-import {setState} from "../actions/actions";
-import {URL} from "../constants";
-import ProductsUI from "./ProductsUI"
-import Loader from "./Loader";
+import {setState} from "../../actions/actions";
+import {URL} from "../../constants";
+import Products from "./Products"
+import Loader from "../Loader";
 
-export default function Products() {
+export default function () {
   const [flagFetch] = useState(true);
   const [loading, setLoading] = useState(true);
 
@@ -36,6 +36,6 @@ export default function Products() {
   return loading ?
       <Loader/>
     :
-      <ProductsUI products={products}/>
+      <Products products={products}/>
 
 }
