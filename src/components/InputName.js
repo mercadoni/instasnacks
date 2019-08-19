@@ -24,7 +24,7 @@ export default function InputName() {
         <Modal.Body>
 
           <h5 className="mb-3">
-            Ingresa tu nombre
+            Enter your name:
           </h5>
 
           <form onSubmit={handleSubmit}>

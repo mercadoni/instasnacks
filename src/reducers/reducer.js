@@ -1,4 +1,5 @@
-import {SET_STATE, ADD_TO_CART, REMOVE_FROM_CART, SORT_LOW_TO_HIGH} from "../actions/actions";
+import {SET_STATE, ADD_TO_CART, REMOVE_FROM_CART, SORT_LOW_TO_HIGH, SORT_HIGH_TO_LOW} from "../actions/actions";
+import {quickSort} from "../helpers/quickSort";
 
 const initial_state = {
   products: [],
@@ -19,6 +20,9 @@ export default function reducer (state = initial_state, {payload, type}) {
 
     case SORT_LOW_TO_HIGH:
       return sort_low_to_high(state);
+
+    case SORT_HIGH_TO_LOW:
+      return sort_high_to_low(state);
 
     default:
       return state
@@ -58,16 +62,22 @@ function remove_from_cart(state, payload){
   };
 }
 
-/*function compare(a, b){
-  if (a &gt; b) return 1;
-  if (b &gt; a) return -1;
-
-  return 0;
-}*/
-
 function sort_low_to_high(state){
-  //arr.sort(compare);
+  const products  = quickSort([...state.products]);
+
   return {
-    ...state
+    ...state,
+    products
+  }
+}
+function sort_high_to_low(state){
+  const products_aux  = quickSort([...state.products]);
+  var products = [];
+  products_aux.map(product => products = [product, ...products]);
+
+
+  return {
+    ...state,
+    products
   }
 }
