@@ -21,7 +21,8 @@ export default function () {
           .then(response => response.json())
           .then(data => {
             setLoading(false);
-            dispatch(setState("products", data.retailer.products));
+            const products_aux = data.retailer.products.filter(product => product.price || product.special_price);
+            dispatch(setState("products", products_aux));
           });
         //throw new Error;
       }

@@ -1,0 +1,50 @@
+$caribbean: #00D59E;
+$caribbean-dark: #00C491;
+$metal: #00C491;
+$dust: #F0F0F0;
+$text-main: #333;
+$eggplant: #531E60;
+
+*, h1, h2, h3, h4, h5, h6, input {
+  color: $text-main;
+}
+
+/*=============== background-colors ===============*/
+.bg-caribbean{
+  background: $caribbean
+}
+
+.bg-caribbean-dark{
+  background: $caribbean-dark
+}
+
+
+/*=============== colors ===============*/
+.caribbean{
+  color: $caribbean !important;
+}
+
+
+/*=============== btns ===============*/
+.btn-metal{
+  white-space: nowrap!important;
+  background-color: $metal !important;
+  color: $dust !important;
+}
+
+.btn-caribbean{
+  white-space: nowrap!important;
+  background-color: $caribbean !important;
+  color: $dust !important;
+}
+
+.btn-eggplant{
+  white-space: nowrap!important;
+  background-color: $eggplant !important;
+  color: $dust !important;
+}
+
+/*=============== font-sizes ===============*/
+.fs-13{
+  font-size: 13px !important;
+}

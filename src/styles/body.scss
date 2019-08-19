@@ -1,0 +1,17 @@
+$medium-bp: 720px;
+$large-bp: 960px;
+$extra-large-bp: 1140px;
+
+#body{
+  width: 100%;
+  @media screen and (max-width: $large-bp) {
+    height: 40vh;
+  }
+  @media screen and (min-width: $large-bp) {
+    height: 60vh;
+  }
+
+  img{
+    height: inherit;
+  }
+}

@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 In the project directory, you can run:
 
-This app is going to be a single page a application and i think i can delive it in tuesday august 20th 2019.
+This app is going to be a single page a application and i think i can delive it in wednesday august 21th 2019.
 
 ### `npm start`
 Runs the app in the development mode.<br>
