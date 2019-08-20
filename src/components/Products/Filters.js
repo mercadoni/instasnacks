@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import {useDispatch} from "react-redux";
 import {sortLowToHigh, sortHighToLow} from "../../actions/actions";
+import "../../styles/app.scss"
 
 export default function Filters () {
   const [sort, setSort] = useState("default");

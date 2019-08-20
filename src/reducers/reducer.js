@@ -1,5 +1,5 @@
 import {SET_STATE, ADD_TO_CART, REMOVE_FROM_CART, SORT_LOW_TO_HIGH, SORT_HIGH_TO_LOW} from "../actions/actions";
-import {quickSort} from "../helpers/quickSort";
+import {compare, compareReverse} from "../helpers/compare";
 
 const initial_state = {
   products: [],
@@ -63,18 +63,16 @@ function remove_from_cart(state, payload){
 }
 
 function sort_low_to_high(state){
-  const products  = quickSort([...state.products]);
+  const products  = [...state.products].sort(compare);
 
   return {
     ...state,
     products
   }
 }
-function sort_high_to_low(state){
-  const products_aux  = quickSort([...state.products]);
-  var products = [];
-  products_aux.map(product => products = [product, ...products]);
 
+function sort_high_to_low(state){
+  const products  = [...state.products].sort(compareReverse);
 
   return {
     ...state,

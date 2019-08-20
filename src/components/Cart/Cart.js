@@ -1,32 +1,43 @@
 import React, {useState, useEffect} from "react"
 import {useSelector, useDispatch} from "react-redux";
-import {removeFromCart} from "../actions/actions";
+//import {removeFromCart} from "../../actions/actions";
+import db from "../../FirestoreConfig"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import "../styles/cart.scss"
-import CartIcon from "./Cart/CartIcon";
-import Product from "./Product";
+import CartIcon from "./CartIcon";
+import Product from "../Product";
+import "../../styles/cart.scss"
 
 export default function Cart () {
   const [open, setOpen] = useState(false);
   const [total, setTotal] = useState(0);
 
+
   const products = useSelector(state => state.products);
   const cart = useSelector(state => state.cart);
 
-  const dispatch = useDispatch();
-  const thisRemoveFromCart = pos => dispatch(removeFromCart(pos));
+  //const dispatch = useDispatch();
+  //const thisRemoveFromCart = pos => dispatch(removeFromCart(pos));
 
   useEffect(()=>{
     setTotal(0);
     var total_aux = 0;
     // eslint-disable-next-line array-callback-return
-    cart.map(pos => {
-      const price = products[pos].price ? products[pos].price : 0;
+    cart.map(product => {
+      const price = product !== undefined && ( product.special_price ? product.special_price : product.price );
       total_aux += price;
     });
     setTotal(total_aux)
   },[cart, products]);
+
+  useEffect(() => {
+    db.doc("components/cart").set({
+        total_price: total,
+        cart
+      })
+      .then(() => console.log("Status saved!"))
+      .catch(error => console.log("Got an error: ", error));
+  }, [total, cart]);
 
   return(
     <div id="cart">
@@ -55,8 +66,8 @@ export default function Cart () {
                 </div>
 
                 {
-                  cart.map((pos, i) => {
-                    return <Product key={`cart-product-${i}`} product={products[pos]} removeFromCart={()=>thisRemoveFromCart(pos)}/>
+                  cart.map((product, i) => {
+                    return <Product key={`cart-product-${i}`} product={product}/>
                   })
                 }
               </div>

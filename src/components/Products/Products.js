@@ -18,7 +18,7 @@ export default function Products({products}){
                   <Product
                     product={product}
                   >
-                    <BtnAdd pos={i}/>
+                    <BtnAdd product={product}/>
                   </Product>
                 </div>
               </div>

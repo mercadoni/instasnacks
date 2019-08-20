@@ -4,6 +4,7 @@ import {setState} from "../../actions/actions";
 import {URL} from "../../constants";
 import Products from "./Products"
 import Loader from "../Loader";
+import Alert from "../Alert";
 
 export default function () {
   const [flagFetch] = useState(true);
@@ -24,11 +25,9 @@ export default function () {
             const products_aux = data.retailer.products.filter(product => product.price || product.special_price);
             dispatch(setState("products", products_aux));
           });
-        //throw new Error;
       }
       catch (e) {
         setLoading(false);
-        //TODO make error alert
       }
     }
     getData()
@@ -37,6 +36,10 @@ export default function () {
   return loading ?
       <Loader/>
     :
-      <Products products={products}/>
+      products.length === 0 ?
+        <Alert type="danger" txt="Ups, Hubo un problema!"/>
+        :
+        <Products products={products}/>
+
 
 }

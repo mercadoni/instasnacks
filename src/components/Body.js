@@ -1,6 +1,6 @@
 import React from "react"
 import logo from "../images/logo.png"
-import Cart from "./Cart";
+import Cart from "./Cart/Cart";
 import "../styles/app.scss"
 import "../styles/body.scss"
 

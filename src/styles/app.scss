@@ -5,7 +5,7 @@ $dust: #F0F0F0;
 $text-main: #333;
 $eggplant: #531E60;
 
-*, h1, h2, h3, h4, h5, h6, input {
+*, h1, h2, h3, h4, h5, h6, input, select, option {
   color: $text-main;
 }
 
@@ -47,4 +47,9 @@ $eggplant: #531E60;
 /*=============== font-sizes ===============*/
 .fs-13{
   font-size: 13px !important;
+}
+
+/*=============== cursors ===============*/
+.cursor-no-drop{
+  cursor: no-drop !important;
 }
