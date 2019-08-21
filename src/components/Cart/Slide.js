@@ -26,12 +26,25 @@ export default function Slide ({show, children}) {
         {
           cart.map((product, i) => {
             return(
-              <Product key={`cart-product-${i}`} product={product}>
-                <ProdDelBtn openModal={() => {openModal(); setProduct(product)}}/>
-              </Product>
+              <div key={`cart-product-${i}`} className="row no-gutters">
+                <div className="col-1 d-flex justify-content-center align-items-center">
+                  <h5>{product.quantity}</h5>
+                </div>
+                <div className="col-11">
+                  <Product product={product}>
+                    <ProdDelBtn openModal={() => {openModal(); setProduct(product)}}/>
+                  </Product>
+                </div>
+              </div>
             )
           })
         }
+
+        <div className="w-100 d-flex">
+          <button className="btn btn-lg btn-metal ml-auto mr-2">
+            Buy
+          </button>
+        </div>
       </div>
 
       <ProdDelModal

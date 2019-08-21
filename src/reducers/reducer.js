@@ -42,8 +42,31 @@ function add_to_cart(state, payload) {
   const {pos} = payload;
   var cart = [...state.cart];
 
-  if(!state.cart.includes(pos))
-    cart = [...cart, pos];
+  const product = cart.find(el => el.name === pos.name);
+  console.log(product);
+
+  if(product === undefined) {
+    cart = [
+      ...cart,
+      {
+        ...pos,
+        quantity: 1
+      }
+    ]
+  }
+  else {
+    const prod_index = cart.indexOf(product);
+    cart = [
+      ...cart.slice(0, prod_index),
+      {
+        ...product,
+        quantity: product.quantity + 1
+      },
+      ...cart.slice(prod_index+1, cart.length),
+    ]
+  }
+
+
 
   return {
     ...state,
