@@ -4,9 +4,44 @@ $metal: #00C491;
 $dust: #F0F0F0;
 $text-main: #333;
 $eggplant: #531E60;
+$danger: #dc3545;
+
+$small-bp: 540px;
+$medium-bp: 720px;
+$large-bp: 960px;
+$extra-large-bp: 1140px;
 
 #cart{
-  & > span{
+  .cart-btn{
+    border: {
+      radius: 100%;
+    }
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    &-icon{
+      padding: 5px 10px;
+      background: $caribbean-dark;
+      font-size: 30px;
+      color: $eggplant;
+      z-index: 1;
+    }
+    &-cont{
+      padding: 0 8px;
+      background: $danger;
+      font-size: 16px;
+      color: $dust;
+      z-index: 2;
+    }
+  }
+
+  .cont-prod{
+    padding: 5px;
+    border: {
+      radius: 100%;
+    }
+    background: $danger;
     position: fixed;
     top: 10px;
     right: 20px;
@@ -41,6 +76,9 @@ $eggplant: #531E60;
     z-index: 200;
     &-open{
       width: 400px;
+      @media screen and (max-width: $small-bp) {
+        width: 95%;
+      }
     }
     .closebtn {
       position: fixed;

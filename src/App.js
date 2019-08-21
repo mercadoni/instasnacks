@@ -3,8 +3,9 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from "./reducers/reducer"
 import Products from "./components/Products";
-import Body from "./components/Body"
+import Header from "./components/Header"
 import InputName from "./components/InputName"
+import Cart from "./components/Cart";
 
 const store = createStore(
   reducer,
@@ -15,7 +16,8 @@ function App() {
   return(
     <Provider store={store}>
       <InputName/>
-      <Body/>
+      <Header/>
+      <Cart/>
       <Products/>
     </Provider>
   )

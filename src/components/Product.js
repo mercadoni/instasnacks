@@ -1,4 +1,5 @@
 import React from "react"
+import "../styles/btndelete.scss"
 
 export default function Product({product, children}) {
   const price = product.special_price ?
@@ -7,7 +8,7 @@ export default function Product({product, children}) {
                   product.price;
 
   return(
-    <div className="my-1 row no-gutters">
+    <div id="product" className="my-1 row no-gutters">
       <div className="col-6 text-center">
         <img src={product.image_url} width="70%" alt={product.name} />
       </div>

@@ -4,7 +4,8 @@ import {compare, compareReverse} from "../helpers/compare";
 const initial_state = {
   products: [],
   cart: [],
-  user_name: ""
+  user_name: "",
+  totalPrice: 0
 };
 
 export default function reducer (state = initial_state, {payload, type}) {

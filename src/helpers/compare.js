@@ -13,3 +13,4 @@ export function compareReverse(a, b){
   if (price_a > price_b) return -1;
   else return 1;
 }
+

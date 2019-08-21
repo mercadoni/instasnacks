@@ -32,6 +32,16 @@ $eggplant: #531E60;
   color: $dust !important;
 }
 
+.btn-outline-metal{
+  white-space: nowrap!important;
+  border: {
+    style: solid;
+    color: $metal !important;
+    width: 1px;
+  };
+  color: $metal !important;
+}
+
 .btn-caribbean{
   white-space: nowrap!important;
   background-color: $caribbean !important;

@@ -1,0 +1,24 @@
+$danger: #dc3545;
+$dust: #F0F0F0;
+
+#btndelete{
+  path{
+    color: $danger;
+  }
+  &:hover, &:active{
+    path{
+      color: $dust;
+    }
+  }
+}
+
+#product{
+  #btndelete{
+    display: none;
+  }
+  &:hover{
+    #btndelete{
+      display: block;
+    }
+  }
+}
