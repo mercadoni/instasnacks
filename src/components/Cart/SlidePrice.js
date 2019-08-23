@@ -15,7 +15,7 @@ export default function SlidePrice () {
     var total_aux = 0;
     // eslint-disable-next-line array-callback-return
     cart.map(product => {
-      const price = product !== undefined ? ( product.special_price ? product.special_price : product.price ) : 0; //TODO
+      const price = product !== undefined ? ( product.special_price ? product.special_price : product.price ) : 0;
       total_aux += price * product.quantity;
     });
     thisSetState("totalPrice", total_aux)
