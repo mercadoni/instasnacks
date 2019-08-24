@@ -43,7 +43,6 @@ function add_to_cart(state, payload) {
   var cart = [...state.cart];
 
   const product = cart.find(el => el.name === pos.name);
-  console.log(product);
 
   if(product === undefined) {
     cart = [

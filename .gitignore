@@ -27,3 +27,4 @@ public/manifest.json
 /.idea
 firebase-debug.log
 /.firebase/hosting.YnVpbGQ.cache
+/src/.env
