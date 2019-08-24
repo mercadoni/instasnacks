@@ -9,21 +9,22 @@ export default function Filters () {
   const dispatch = useDispatch();
 
   useEffect(()=>{
+    const thisSortLowToHigh = () => dispatch(sortLowToHigh());
+    const thisSortHighToLow = () => dispatch(sortHighToLow());
+
     if(sort === "ascendant")
-      dispatch(sortLowToHigh());
+      thisSortLowToHigh();
     if(sort === "descendant")
-      dispatch(sortHighToLow());
+      thisSortHighToLow();
   }, [dispatch, sort]);
 
   return(
-
-      <div className="w-100 d-flex mt-2">
-          <select className="form-control w-auto ml-auto" value={sort} onChange={e => setSort(e.target.value)}>
-            <option value="default" disabled>--Sort--</option>
-            <option value="ascendant">Sort by price low to high</option>
-            <option value="descendant">Sort by price high to low</option>
-          </select>
-      </div>
-
+    <div className="w-100 d-flex mt-2">
+      <select className="form-control w-auto ml-auto" value={sort} onChange={e => setSort(e.target.value)}>
+        <option value="default" disabled>--Sort--</option>
+        <option value="ascendant">Sort by price low to high</option>
+        <option value="descendant">Sort by price high to low</option>
+      </select>
+    </div>
   )
 }

@@ -18,14 +18,11 @@ export default function () {
 
   const dispatch = useDispatch();
 
-
-
   useEffect(()=>{
     const thisSetState = (field, value) => dispatch(setState(field, value));
 
     if(!initialize)
       getData(thisSetState, setInitialize);
-
   }, [dispatch, initialize]);
 
   useEffect(() => {

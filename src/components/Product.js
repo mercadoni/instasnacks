@@ -19,7 +19,6 @@ export default function Product({product, children}) {
         </div>
         <div className="h-100"/>
         {children}
-        {/*<button style={{"top":"0", "right":"0"}} className="btn-sm btn-danger" onClick={removeFromCart}>x</button>*/}
       </div>
     </div>
   )
