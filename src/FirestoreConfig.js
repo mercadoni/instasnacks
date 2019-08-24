@@ -9,6 +9,6 @@ firebase.initializeApp({
   projectId: "instasnacks-d325d"
 });
 
-let db = firebase.firestore();
+const db = firebase.firestore();
 
 export default db;
