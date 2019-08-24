@@ -22,4 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/public/manifest.json
+public/manifest.json
+.firebaserc
+/.idea
+firebase-debug.log
