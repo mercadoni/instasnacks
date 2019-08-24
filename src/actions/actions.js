@@ -14,11 +14,11 @@ export function setState(field, value) {
   }
 }
 
-export function addToCart(pos){
+export function addToCart(prod){
   return {
     type: ADD_TO_CART,
     payload: {
-      pos
+      prod
     }
   }
 }

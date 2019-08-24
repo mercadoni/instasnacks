@@ -39,16 +39,16 @@ function set_state(state, payload) {
 }
 
 function add_to_cart(state, payload) {
-  const {pos} = payload;
+  const {prod} = payload;
   var cart = [...state.cart];
 
-  const product = cart.find(el => el.name === pos.name);
+  const product = cart.find(el => el.name === prod.name);
 
   if(product === undefined) {
     cart = [
       ...cart,
       {
-        ...pos,
+        ...prod,
         quantity: 1
       }
     ]
