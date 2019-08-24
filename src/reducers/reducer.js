@@ -40,7 +40,8 @@ function set_state(state, payload) {
 
 function add_to_cart(state, payload) {
   const {prod} = payload;
-  var cart = [...state.cart];
+  let cart = [...state.cart];
+  let totalPrice = state.totalPrice;
 
   const product = cart.find(el => el.name === prod.name);
 
@@ -51,7 +52,8 @@ function add_to_cart(state, payload) {
         ...prod,
         quantity: 1
       }
-    ]
+    ];
+    totalPrice += prod.price;
   }
   else {
     const prod_index = cart.indexOf(product);
@@ -62,26 +64,28 @@ function add_to_cart(state, payload) {
         quantity: product.quantity + 1
       },
       ...cart.slice(prod_index+1, cart.length),
-    ]
+    ];
+    totalPrice += product.price;
   }
-
-
 
   return {
     ...state,
-    cart
+    cart,
+    totalPrice
   };
 }
 
 function remove_from_cart(state, payload){
-  const {pos} = payload;
-  var cart = [...state.cart];
+  const {prod} = payload;
+  let cart = [...state.cart];
+  const totalPrice = state.totalPrice - prod.price * prod.quantity;
 
-  cart = cart.filter(el => el !== pos);
+  cart = cart.filter(el => el !== prod);
 
   return {
     ...state,
-    cart
+    cart,
+    totalPrice
   };
 }
 
