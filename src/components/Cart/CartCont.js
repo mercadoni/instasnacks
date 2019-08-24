@@ -7,7 +7,7 @@ export default function CartCont () {
 
 
   useEffect(()=>{
-    var totalProductsAux = 0;
+    let totalProductsAux = 0;
     cart.map(product => totalProductsAux += product.quantity);
 
     setTotalProducts(totalProductsAux)
