@@ -6,7 +6,7 @@ import Products from "./Products"
 import Loader from "../Loader";
 import Alert from "../Alert";
 
-export default function () {
+export default function Index() {
   const [flagFetch] = useState(true);
   const [loading, setLoading] = useState(true);
 
